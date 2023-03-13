@@ -1,17 +1,18 @@
+@wip
 Feature: Login Functionality
 
   Background:
     Given user is on the login page
 
 
-  @SEAMLES10-84 @wip
+  @SEAMLESS10-84
   Scenario: Positive test case-1
     When user enters "Employee70" as username
     And user enters "Employee123" as password
     And user clicks login button
     Then user should login successfully
 
-  @SEAMLES10-85 @wip
+  @SEAMLESS10-85
   Scenario: Positive test case-2
     When user enters "Employee70" as username
     And user enters "Employee123" as password
@@ -20,14 +21,14 @@ Feature: Login Functionality
 
 
 
-  @SEAMLES10-86 @wip
+  @SEAMLESS10-86
   Scenario:
     When user enters "Patron" as username
     And user enters "Employee123" as password
     And user clicks login button
     Then Wrong username or password Message Displayed
 
-  @SEAMLES10-87 @wip
+  @SEAMLESS10-87
   Scenario:
     When user enters "Employee70" as username
     And user enters "Patron123" as invalidPassword
@@ -35,39 +36,28 @@ Feature: Login Functionality
     Then Wrong username or password Message Displayed
 
 
-  @SEAMLES10-88 @wip
+  @SEAMLESS10-88
   Scenario:
     When user enters "Patron" as username
     And user enters "Patron123" as invalidPassword
     And user clicks login button
     Then Wrong username or password Message Displayed
 
-     @SEAMLES10-86/88 @wip
-      Scenario Outline: Negative Test (Invalid credentials)
-        When user enters invalid credentials
-        Then Wrong username or password Message Displayed
-
-        Examples: username and password
-          | username    | password    |
-          | Patron      | Employee123 |
-          | Employee70  | Patron123   |
-          | Patron      | Patron123   |
-
-@SEAMLES10-89 @wip
+@SEAMLESS10-89
   Scenario:
     When user enters "Employee70" as username
     And user enters "" as no password
     And user clicks login button
     Then Please Fill Out Password Field Displayed
 
-  @SEAMLES10-90 @wip
+  @SEAMLESS10-90
   Scenario: Negative Test (blank credentials)
     When user enters "" as no username
     And user enters "Employee123" as password
     And user clicks login button
     Then Please Fill Out UserName Field Displayed
 
-  @SEAMLES10-91 @wip
+  @SEAMLESS10-91
   Scenario: Negative Test (blank credentials)
     When user enters "" as no username
     And user enters "" as password
@@ -75,30 +65,20 @@ Feature: Login Functionality
     Then Please Fill Out UserName Field Displayed
 
 
-   @SEAMLES10-89/91 @wip
-      Scenario Outline: Negative Test (blank credentials)
-        When user leave credential case as blank
-        Then Wrong username or password Message Displayed
 
-        Examples: username and password
-          | username    | password    |
-          | Employee70  |             |
-          |             | Patron123   |
-          |             |             |
-
-  @SEAMLES10-117 @wip
+  @SEAMLESS10-117
   Scenario:
     When user enters "Employee123" as password
     Then password type is dotForm By Default
 
-  @SEAMLES10-118 @wip
+  @SEAMLESS10-118
   Scenario:
     When user enters "Employee123" as password
     And user clicks eye icon
     Then password is visible
 
 
-  @SEAMLES10-119 @wip
+  @SEAMLESS10-119
   Scenario:
     When user enters "Employee70" as username
     And user enters "Employee123" as password
@@ -106,7 +86,7 @@ Feature: Login Functionality
     And user Clicks Forgot Password Button
     Then reset Password Button Is Displayed
 
-  @SEAMLES10-120 @wip
+  @SEAMLESS10-120
   Scenario:
     Then user Can See userName Placeholder
     Then user can see password placeholder
