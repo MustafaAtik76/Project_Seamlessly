@@ -1,38 +1,10 @@
 /*
-@SEAMLESS10-358 @wip
-Scenario: Positive test case-2
-Given user is on the login page
-When user enters "Employee70" as username
-And user enters "Employee123" as password
-And user clicks Enter Key
-Then user should login successfully
 
 
 
-@SEAMLESS10-86
-Scenario:
-Given user is on the login page
-When user enters "Patron" as username
-And user enters "Employee123" as password
-And user clicks login button
-Then Wrong username or password Message Displayed
-
-@SEAMLESS10-87
-Scenario:
-Given user is on the login page
-When user enters "Employee70" as username
-And user enters "Patron123" as invalidPassword
-And user clicks login button
-Then Wrong username or password Message Displayed
 
 
-@SEAMLESS10-88
-Scenario:
-Given user is on the login page
-When user enters "Patron" as username
-And user enters "Patron123" as invalidPassword
-And user clicks login button
-Then Wrong username or password Message Displayed
+
 
 @SEAMLESS10-89
 Scenario:

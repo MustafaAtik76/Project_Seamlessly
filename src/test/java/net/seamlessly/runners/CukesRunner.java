@@ -14,9 +14,9 @@ import org.junit.runner.RunWith;
                 "me.jvt.cucumber.report.PrettyReports:target/cucumber",//Maven cucumber Reporting ( pretty ). Creates a comprehensive demonstrative report on a web page
         },
         features = "src/test/resources/features",//links to the "features" packagee
-        glue = "src/test/step_definitions",//Links to the "step_definitions" package
-        dryRun = true,
-        tags = ""
+        glue = "net/seamlessly/step_definitions",//Links to the "step_definitions" package
+        dryRun = false,
+        tags = "@wip"
        // publish = true//creates a link of web browser on the console that includes a report so that the report page can be shared
 
 
