@@ -13,7 +13,7 @@ public class DashboardPage {
     }
 
 
-    @FindBy(xpath = "//*[@id=\"app-dashboard\"]/h2")
+    @FindBy(xpath = "//*[@id=\"app-dashboard\"]/div[1]/div[1]/div[1]/h2")
     public WebElement header;
 
 

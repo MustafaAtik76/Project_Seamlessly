@@ -6,45 +6,49 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 public class LoginPage {
+
     public LoginPage() {
         PageFactory.initElements(Driver.getDriver(), this);
     }
-
-    @FindBy(id = "user")
+    @FindBy(id="user")
     public WebElement userName;
 
     @FindBy(id = "password")
-    public WebElement password;
+    public WebElement inputPassword;
 
     @FindBy(id = "submit-form")
     public WebElement loginButton;
+    public void login(String username, String password) {
+        userName.sendKeys(username);
+        inputPassword.sendKeys(password);
+        loginButton.click();
+    }
 
-    @FindBy(css = ".warning")
-    public WebElement invalidCredentialsWarning;
+    @FindBy(css = "a#lost-password")
+    public WebElement forgotPassword;
 
-    @FindBy(xpath = "//input[@type='password']")
-    public WebElement passwordType;
+    @FindBy(xpath = "//*[normalize-space(text()) = 'Log in with a device']")
+    public WebElement linkLogWithDevice;
 
-    @FindBy(xpath = "//input[@type='text']")
-    public WebElement passwordtext;
+    @FindBy(xpath = "//*[normalize-space(text()) = 'Seamlessly']")
+    public WebElement divSeamlessly;
 
-    @FindBy(xpath = "//a[@href='#']")
-    public WebElement eyeIcon;
+    @FindBy(xpath = "//*[text() = 'Seamlessly']")
+    public WebElement linkSeamlessly;
 
-    @FindBy(id = "lost-password")
-    public WebElement forgotPasswordButton;
+    @FindBy(xpath = "//*[normalize-space(text())= 'Seamlessly – Impeccable Efficiency']")
+    public WebElement impeccableEfficiency;//TODO check this locator
 
-    @FindBy(xpath = "//input[@id='reset-password-submit']")
-    public WebElement resetPasswordButton;
-
-    @FindBy(xpath = "//input[@placeholder='Username or email']")
-    public WebElement userNamePlaceHolder;
-
-    @FindBy(xpath = "//input[@placeholder='Password']")
-    public WebElement passwordPlaceHolder;
-
+    @FindBy(xpath = "//a[@class='toggle-password']")
+    public WebElement passwordEye;
 
 
+    @FindBy(css = "p.warning.wrongPasswordMsg")
+    public WebElement wrongPassword;
 
+    @FindBy(xpath = "//input[@id='user' and @required='required']")
+    public WebElement blankText;
 
+    @FindBy(css = "input#reset-password-submit")
+    public WebElement resetPassword;
 }
