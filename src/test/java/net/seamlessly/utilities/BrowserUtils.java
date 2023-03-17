@@ -77,8 +77,8 @@ public class BrowserUtils {
      *
      * @param expectedInURL
      */
-    public static void verifyURLContains(String expectedInURL) {
-        Assert.assertTrue(Driver.getDriver().getCurrentUrl().contains(expectedInURL));
+    public static void verifyURLContains(String seamlesslyUrl) {
+        Assert.assertTrue(Driver.getDriver().getCurrentUrl().contains(seamlesslyUrl));
     }
 
     /**
