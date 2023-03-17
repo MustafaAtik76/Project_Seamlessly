@@ -25,6 +25,7 @@ public class LogOutPage {
     @FindBy(id = "submit-form")
     public WebElement loginButton;
 
-
+    @FindBy(xpath = "//*[@id=\"header\"]/div/h1")
+    public WebElement logo;
 
 }

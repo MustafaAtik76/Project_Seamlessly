@@ -39,7 +39,7 @@ public class LogOutStepDefinitions {
 
     @Then("user should login successfully")
     public void user_should_login_successfully() {
-        BrowserUtils.verifyURLContains("files");
+        Assert.assertTrue(Driver.getDriver().getTitle().toLowerCase().contains("dashboard"));
     }
 
 
@@ -60,6 +60,5 @@ public class LogOutStepDefinitions {
 
     @Then("verify user is on the login page")
     public void verifyUserIsOnTheLoginPage() {
-        Assert.assertTrue(logOutPage.loginButton.isDisplayed());
-    }
+        Assert.assertTrue(logOutPage.loginButton.isDisplayed());    }
 }
