@@ -1,4 +1,4 @@
-@wip
+@wip @SEAMLES10-455
 Feature: Logout Functionality
 
   Background:
@@ -8,14 +8,14 @@ Feature: Logout Functionality
     Given user clicks login button
     Given user should login successfully
 
-  @SEAMLES- @wip
-  Scenario:
+  @SEAMLES10-456 @wip
+  Scenario: User can logout
     When clicks avatar icon
     And user clicks logout link
     Then verify user is on the login page
 
-  @SEAMLES- @wip
-  Scenario:
+  @SEAMLES10-457 @wip
+  Scenario:User can not go to home page again by clicking step back button
     When clicks avatar icon
     And user clicks logout link
     And user trys navigating back
