@@ -23,7 +23,9 @@ public class LogOutStepDefinitions {
     }
 
     @When("user enters {string} as username")
-    public void userEntersAsUsername(String userName) {
+
+    public void userEntersAsUsername(String userName) throws InterruptedException {
+        Thread.sleep(3000);
         logOutPage.userName.sendKeys(userName);
     }
 
